@@ -1,0 +1,183 @@
+header {
+  position: relative;
+	width: 100%;
+  max-width: 1200px;
+	height: 100vh;
+	color: white;
+  display: table;
+  z-index: 2;
+	img {
+		margin: 0 auto;
+		margin-top: 35vh;
+		width: 300px;
+		max-width: 200px;
+	}    
+  h2 {
+    position: absolute;
+    top: 36%;
+    /*padding: 0 18%;*/
+    font-size: 58px;
+    font-weight: $light;
+    line-height: 76px;
+    color: $white;
+    z-index: 4;
+  }
+}
+
+svg {
+  width: 60%;
+  height: auto;
+  margin-top: 15%;
+  margin-left: 20%;
+}
+
+.logo-pixel {
+  @include transition(all .2s ease-out);
+  &:hover {
+  }
+}
+
+.logo-pixel:nth-child(2n+1) {
+  -webkit-animation: fadeInRight 2.5s ease-in-out;
+  -o-animation: fadeInRight 2.5s ease-in-out;
+  animation: fadeInRight 2.5s ease-in-out;
+  &:hover {
+    opacity: 0; 
+    -webkit-animation: fadeInLeft 1s;
+    -o-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+  }
+}
+
+.logo-pixel:nth-child(2n+2) {
+  -webkit-animation: fadeInLeft 2.5s ease-in-out;
+  -o-animation: fadeInLeft 2.5s ease-in-out;
+  animation: fadeInLeft 2.5s ease-in-out;
+  &:hover {
+    opacity: 0; 
+    -webkit-animation: fadeInRight 1s;
+    -o-animation: fadeInRight 1s;
+    animation: fadeInRight 1s;
+  }
+}
+
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../img/bg.png) bottom no-repeat;
+  background-size: cover;
+}
+
+.work {
+  height: 340px;
+  position: relative;
+  background: $black;
+  padding: 0 40px;
+  border: 1px solid $black;
+  @include transition(height .3s ease-in);
+  &:hover {
+    @include opacity(1);
+  }
+  h2 {
+    padding-left: 20px;
+    font-size: 54px; 
+    color:#000;
+    margin: 80px 0;
+  }
+  .work-content {
+    position: absolute;
+    z-index: 2;
+  }
+  .work-text {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  img {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 48%;
+    height: auto;
+    /*float: right;*/
+    display: block;
+  }
+}
+
+.work-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+
+}
+.work-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  @include opacity(0.5);
+  @include transition(opacity .3s ease-in);
+  z-index: 1;
+}
+
+.work:hover .work-bg {
+  @include opacity(1);
+}
+
+.cell {
+  background: url(../img/work/cell-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.rooma {
+  background: url(../img/work/rooma-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.batten {
+  background: url(../img/work/batten-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.your-project {
+  background: #333;
+}
+
+#heading {
+  /*max-width: 1200px;*/
+  height: 100vh;
+  position: relative;
+  display: table;
+  background: none;
+  h2 {
+    margin-top: 15%;
+    vertical-align: middle;
+    font-size: 58px;
+    font-weight: $light;
+    line-height: 76px;
+    color: $white;
+  }
+}
+
+#team {
+  padding: 150px 0;
+  text-align: center;
+}
+.team-member {
+  img {
+    width: 100%;
+    max-width: 60%;
+    /*display: block;*/
+    border-radius: 50%;
+  }
+}
+
+#contact {
+  padding: 150px 0;
+}

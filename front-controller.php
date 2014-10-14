@@ -14,10 +14,5 @@ if(empty($path)) {                                  // HOME
 }
 
 $isHome    = ($q == '');
-$isResults = preg_match('#^results+/?$#', $q);
-
-if($isResults) {
-    require_once('model-results.php');
-}
 
 require_once('front-view.php');
